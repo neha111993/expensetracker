@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="try.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="maincontainer">
+        <header class="header">
+            <div class="heading">
+                <h2>Hi User</h2>
+                <p>Track your spending</p>
+            </div>
+        </header>
+
+        <main class="contextcontainer">
+            <div id="Summary" class="tab-content">
+                <section class="balancecard">
+                    <label>MONTHLY INCOME</label>
+                    <input type="number" id="monthlyIncome" placeholder="0.00" oninput="saveIncome()">
+                    <div id="balanceDisplay"></div>
+                </section>
+                <div id="displayArea"></div>
+                <h4 style="text-align: center;">Transactions</h4>
+                <table id="expenseTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expenseBody"></tbody>
+                </table>
+            </div>
+            <fieldset id="enteries" class="tab-content">
+                <h3>Add a New Expense</h3>
+                <hr>
+                <form id="expenseForm">
+                    <label><b>CATEGORY</b></label>
+                    <select name="category" id="category" required>
+                        <option value="">--Select--</option>
+                        <option value="Children's Needs">Children's Needs</option>
+                        <option value="Debt & Loan">Debt & Loan</option>
+                        <option value="Dinning Out">Dinning Out</option>
+                        <option value="Education & Learning">Education & Learning</option>
+                        <option value="ELectricity Bill">ELectricity Bill</option>
+                        <option value="Emergency">Emergency</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Fitness">Fitness</option>
+                        <option value="Gifts">Gifts</option>
+                        <option value="Groceries">Groceries</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Hobby">Hobby</option>
+                        <option value="Housing">Housing</option>
+                        <option value="Insurance">Insurance</option>
+                        <option value="Investments">Investments</option>
+                        <option value="Legal & Government">Legal & Government</option>
+                        <option value="Others">Others</option>
+                        <option value="Party">Party</option>
+                        <option value="Personal Care">Personal Care</option>
+                        <option value="Pet Care">Pet Care</option>
+                        <option value="Phone Bill">Phone Bill</option>
+                        <option value="Proffessional Services">Proffessional Services</option>
+                        <option value="Snacks">Snacks</option>
+                        <option value="Subscriptions">Subscriptions</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Utilities">Utilities</option>
+                        <option value="Payment">Payment</option>
+                    </select>
+                    <label for="amount"><b>AMOUNT</b></label>
+                    <input type="number" placeholder="Enter Amount" id="amount" required>
+                    <label for="date"><b>DATE</b></label>
+                    <input type="date" placeholder="Enter Date" id="date" required>
+                    <label for="description"><b>Description</b></label>
+                    <textarea id="description" name="description" placeholder="Write Description(Not Necessary)"></textarea>
+                    <div><input type="checkbox" id="reminderCheckbox"> Set as Monthly Recurring Reminder?</div>
+                    <button type="submit" id="submitBtn" class="btn" onclick="showSummaries()" disabled>Submit</button>
+                </form>
+            </fieldset>
+            <div id="statusMessage"></div>
+            <div class="tab-content" id="spendings">
+                <h4>Monthly Spendings</h4>
+                <div id="timeSummaryDisplay" style="padding: 10px;"></div>
+                <h4 style="text-align:center; color: black;">Yearly Accumulation (Total Savings)</h4>
+                <div id="yearlySummary" style="padding: 10px;"></div>
+                <h4 style="text-align:center; color: black;">Category Breakdown</h4>
+                <div id="categoryChart" style="padding: 10px; color: white;"></div>
+            </div>
+            <div class="tab-content" id="functions">
+                <h4>Active Reminders</h4>
+                <div id="reminderList" style="padding: 10px;"></div>
+                <div class="optout">
+                    <button type="button" class="btn2" title="Download Report" onclick="downloadPDF()" style="background-color: #2e7d32;">
+                    <i class="fa-solid fa-file-pdf"></i> Download Pdf</button>
+                    <button type="submit" class="btn2"><a href="index.html">Log Out</a></button>
+                </div>
+            </div>
+        </main>
+        <footer class="bottom">
+            <button type="submit" class="btn1 active" onclick="openTab(event,'Summary')">Summary</button>  |
+            <button type="submit" class="btn1" onclick="openTab(event,'enteries')">Enteries</button>   |
+            <button type="submit" class="btn1" title="Monthly Spending" onclick="openTab(event,'spendings')">Spendings </button>   | 
+            <button type="submit" class="btn1" title="Functions" onclick="openTab(event,'functions')">Ohters</button>
+        </footer>
+    </div>
+
+</body>
+<script src="try.js"></script>
+</html>

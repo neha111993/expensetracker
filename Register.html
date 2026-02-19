@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="Container">
+        <h1>Create a new account</h1>
+        <hr>
+        <h2>It's quick and easy</h2>
+        <form action="try.html">
+            <input type="name" name="name" placeholder="Full Name" required>
+            <input type="text" placeholder="Mobile number or email address" name="email" id="number-address" required>
+            <input type="password" placeholder="New password" name="password" id="password" required>
+            <button class="btn" onclick="genPassword()">Generate Password</button>
+            <button type="submit">Sign Up</a></button>
+            <div class="login">
+                <p>Already have any account?</p>
+                <a href="index.html">Log in</a>
+            </div>
+        </form>    
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>

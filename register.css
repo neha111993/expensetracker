@@ -1,0 +1,244 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing:border-box ;
+  text-align: center;
+  font-family: Helvetica;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(122, 120, 120);
+}
+.Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background: rgb(139, 126, 140);
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px 10px 20px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  backdrop-filter: blur(20px);
+  margin-top: 20px;
+}
+h1{
+  font-size: 25px;
+  text-align: center;
+  color: black;
+}
+hr{
+  width: 100%;
+  margin-top: 10px;
+}
+h2{
+  font-size: 15px;
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #162938;
+  padding: 10px;
+}
+form{
+  display:flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  gap: 20px;
+}
+
+form input{
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  background: transparent;
+  color: #fff;
+  font-size: medium;
+}
+input:hover{
+  background-color: darkgray;
+  border: 2px solid brown;
+}
+input::placeholder{
+  color: #fff;
+}
+button{
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  font-weight:bold;
+  color: black;
+  cursor: pointer;
+}
+.btn{
+  background: none;
+
+}
+label{
+  background: rgb(139, 126, 140);
+  align-self: center;
+  width: 50%;
+  margin-top: -30px;
+}
+.g_id_signin{
+  width: 80%;
+  align-self: center;
+  border-radius: 20px;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  gap: 5px;
+}
+.login a{
+  color: blue;
+}
+.login a:hover{
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+/* .input-box input{
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 80%;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  padding: 10px 25px 10px 10px;
+}
+.input-box input:hover{
+  background-color: darkgray;
+  border: 2px solid brown;
+}
+.input-box input::placeholder{
+  color: #fff;
+}
+::placeholder:hover{
+  transform: scaleX(90deg);
+}
+.input-box1 input{
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 80%;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  padding: 10px 25px 10px 10px;
+}
+.input-box1 input::placeholder{
+  color: #fff;
+}
+.input-box1 input:hover{
+  background-color: darkgray;
+  border: 2px solid brown;
+}
+.input-box1 label{
+  color: black;
+}
+.select{
+  color: black;
+}
+.select input{
+  margin-left: -40px;
+  margin-right: -60px;
+  justify-content: space-evenly; 
+}
+.input-box3 input{
+  width: 80%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  padding: 10px 25px 10px 10px;
+}
+.input-box3 input::placeholder{
+  color: #fff;
+}
+.input-box3 input:hover{
+  background-color: darkgray;
+  border: 2px solid brown;
+  color: #162938;
+}
+.input-box4 input{
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  width: 80%;
+  padding: 10px 25px 10px 10px;
+}
+.input-box4 input:hover{
+  background-color: darkgray;
+  border: 2px solid brown;
+  color: #162938;
+}
+.input-box4 input::placeholder{
+  color: #fff;
+}
+.Container .btn{
+  font-weight: 100;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  color: white;
+  padding: 5px;
+  width: 30%;
+  cursor: pointer;
+  background: transparent;
+  margin-top: 15px;
+  overflow: hidden;
+  text-wrap: nowrap;
+  text-decoration: none;
+  text-align: center;
+}
+.Container .btn:hover{
+  background-color: darkgray;
+  border: 1px solid brown;
+  color: #162938;
+}
+button{
+  width: 80px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  font-weight:bold;
+  color: black;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+button a{
+  color: black;
+}
+.bottom{
+  border-top: 2px solid #162938;
+}
+.Login a{
+  color: black;
+}
+.Login a:hover{
+  color: black;
+  text-decoration: underline;
+}
+@media(max-width: 700px)
+{
+  .Container{
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    margin: 10px;
+  }
+  .input-box1 input::placeholder{
+    color: #fff;
+  }
+} */

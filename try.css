@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(241, 227, 227);
+    height: 130vh;
+}
+/*  WHOLE PAGE HEADER, MAIN BOTTOM */
+.maincontainer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 150vh;
+    padding-top: 120px;
+}
+
+/* HEADER USER */
+header{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 0;
+    background-color: rgb(101, 101, 238);
+    color: white;
+    position: fixed;
+    width: 80%;
+    height: 100px;
+    top: 0;
+    border-radius:0 0 15px 15px;
+    z-index: 2;
+}
+.heading{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.heading h2{
+    padding-bottom: 15px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* SUMMARY TAB */
+#Summary{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#summary h4{
+    justify-content: center;
+    text-align: center; 
+    color: black;
+}
+.balancecard{
+    background-color: cadetblue;
+    color: white;
+    position: relative;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 60%;
+    height: 200px;
+    border-radius: 10px;
+}
+.balancecard input{
+    margin-top: 10px;
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+/* TRANSACTION TABLE */
+table{
+    color: white;
+    align-items: center;
+    text-align: center;
+    border-collapse: collapse;
+}
+thead,th{
+    background-color: rgb(8, 77, 80);
+    padding: 10px; 
+    border: 1px solid cadetblue;
+}
+tr{
+    padding: 10px; 
+    background-color: rgb(27, 126, 129);
+}
+
+/* ENTERIES TAB */
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    background-color: cadetblue;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+fieldset{
+    display: none;
+}
+hr{
+    width: 95%;
+}
+form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+    width: 90%;
+}
+form select
+{
+    width: 97%;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: none;   
+}
+form input{
+    width: 97%;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: none;   
+}
+form select,textarea{
+    width: 99%;
+}
+textarea{
+    height: 60px;
+    text-align: center;
+    padding-top: 10px;
+}
+input[type="checkbox"]{
+    accent-color: brown;
+    width: 20px;
+    vertical-align: middle;
+}
+        /* SUBMIT BUTTON */
+.btn{ 
+    justify-content: center;
+    align-self: center;
+    width: 40%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* SPENDING TAB */
+#spendings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:stretch;
+}
+#spendings h4{
+    text-align: center;
+    font-size: larger;
+}
+#spendings{
+    display: none;
+}
+
+/* FUNCTIONS TAB */
+#functions{
+    display: flex;
+    flex-direction: column;
+}
+#functions h4{
+    text-align:center; 
+    color: black;
+}
+.optout{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;   
+    justify-content: center;
+}
+.btn2{
+    width: 33%;
+    height:40px;
+    border: none;
+    border: 1px solid grey;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: large;
+}
+.btn2 a{
+    color: black;
+}
+#functions{
+    display: none;
+}
+
+/* BOTTOM */
+.bottom{
+    position: fixed;
+    bottom: 0;
+    background-color:rgb(197, 223, 223);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-self: center;
+    align-items: center;
+    color: rgb(160, 12, 12);
+}
+.btn1{
+    height: 35px;
+    width: 16%;
+    border: none;
+    background: transparent;
+    text-shadow: 2px solid grey;
+    cursor: pointer;
+    font-size: small;
+}
+.btn1:hover{
+    color: white;
+    transition: 0.2s;
+    background-color: rgb(211, 149, 56);
+}
+.bottom .active{
+    color: white;
+    background-color: brown;
+}
+/* --- MEDIA QUERY FOR SMALL PHONES --- */
+@media (max-width: 480px) {
+    .maincontainer {
+        padding-bottom: 80px; /* Space for bottom nav */
+    }
+    
+    .card {
+        flex: 1 1 100%; /* Force cards to take full width on tiny screens */
+    }
+    
+    header h2 {
+        font-size: 1.2rem;
+    }
+}
