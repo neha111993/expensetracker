@@ -414,13 +414,6 @@ async function downloadPDF() {
 function logoutUser() {
     // Clear user-specific data
     localStorage.removeItem('userName');
-    
-    // Optional: If you want to clear income/expenses on logout, uncomment below:
-    // localStorage.clear(); 
-
     // Redirect back to login/signup page
     window.location.href = "index.html"; 
-}
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js');
 }
